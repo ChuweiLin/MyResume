@@ -1,48 +1,51 @@
 :root {
   color-scheme: light;
-  --surface-1: #fcfcfb;
-  --page: #f9f9f7;
-  --text-primary: #0b0b0b;
-  --text-secondary: #52514e;
-  --text-muted: #898781;
-  --gridline: #e1e0d9;
-  --baseline: #c3c2b7;
-  --series-1: #2a78d6;
-  --series-1-wash: rgba(42, 120, 214, 0.1);
-  --border: rgba(11, 11, 11, 0.1);
+  --surface-1: #fbfdfc;
+  --page: #f5f9f8;
+  --text-primary: #0f2624;
+  --text-secondary: #4d6663;
+  --text-muted: #7c928e;
+  --gridline: #dde6e3;
+  --baseline: #b9c9c5;
+  --series-1: #1f8a86;
+  --series-1-wash: rgba(31, 138, 134, 0.1);
+  --accent-warm: #d97f22;
+  --border: rgba(15, 38, 36, 0.14);
   --card-bg: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:where(:not([data-theme="light"])) {
     color-scheme: dark;
-    --surface-1: #1a1a19;
-    --page: #0d0d0d;
-    --text-primary: #ffffff;
-    --text-secondary: #c3c2b7;
-    --text-muted: #898781;
-    --gridline: #2c2c2a;
-    --baseline: #383835;
-    --series-1: #3987e5;
-    --series-1-wash: rgba(57, 135, 229, 0.14);
-    --border: rgba(255, 255, 255, 0.1);
-    --card-bg: #171716;
+    --surface-1: #0f1e1c;
+    --page: #0c1615;
+    --text-primary: #eef7f5;
+    --text-secondary: #9db8b4;
+    --text-muted: #7fa39d;
+    --gridline: #1e302c;
+    --baseline: #2c4340;
+    --series-1: #3fb0ab;
+    --series-1-wash: rgba(63, 176, 171, 0.14);
+    --accent-warm: #f0a748;
+    --border: rgba(255, 255, 255, 0.12);
+    --card-bg: #132321;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --surface-1: #1a1a19;
-  --page: #0d0d0d;
-  --text-primary: #ffffff;
-  --text-secondary: #c3c2b7;
-  --text-muted: #898781;
-  --gridline: #2c2c2a;
-  --baseline: #383835;
-  --series-1: #3987e5;
-  --series-1-wash: rgba(57, 135, 229, 0.14);
-  --border: rgba(255, 255, 255, 0.1);
-  --card-bg: #171716;
+  --surface-1: #0f1e1c;
+  --page: #0c1615;
+  --text-primary: #eef7f5;
+  --text-secondary: #9db8b4;
+  --text-muted: #7fa39d;
+  --gridline: #1e302c;
+  --baseline: #2c4340;
+  --series-1: #3fb0ab;
+  --series-1-wash: rgba(63, 176, 171, 0.14);
+  --accent-warm: #f0a748;
+  --border: rgba(255, 255, 255, 0.12);
+  --card-bg: #132321;
 }
 
 * {
@@ -136,6 +139,16 @@ html {
   padding: 6px 14px;
   font-size: 0.85rem;
   color: var(--text-primary);
+}
+
+.skill-group:nth-of-type(odd) .skills-list li {
+  border-color: var(--series-1);
+  color: var(--series-1);
+}
+
+.skill-group:nth-of-type(even) .skills-list li {
+  border-color: var(--accent-warm);
+  color: var(--accent-warm);
 }
 
 .timeline-item {
@@ -269,6 +282,10 @@ h2 {
   font-weight: 700;
 }
 
+#stat-latest {
+  color: var(--accent-warm);
+}
+
 .stat-label {
   font-size: 0.8rem;
   color: var(--text-secondary);
@@ -392,7 +409,7 @@ svg#citation-chart {
 
 .paper-type {
   text-transform: capitalize;
-  color: var(--text-muted);
+  color: var(--accent-warm);
 }
 
 footer {
