@@ -77,22 +77,28 @@
   "experience": [
     {
       "role": "Scientist",
-      "org": "University of Washington — Schweppe Lab",
+      "org": "University of Washington — Schweppe Lab · Seattle, WA",
       "start": "2022",
       "end": "Present",
       "bullets": [
-        "Mass spectrometry method development for quantitative and multiplexed proteomics",
-        ""
+        "Independently designed and executed a large-scale proteomic drug-perturbation platform across 24 human cancer cell lines and 15 therapeutics, generating and analyzing over 1,000 reproducible proteome and viability profiles to identify mechanisms of drug resistance",
+        "Performed cell-based functional assays and molecular techniques (Western blot, qPCR) to validate drug response phenotypes, and maintained mammalian/cancer cell line cultures with consistent aseptic technique across 1,000+ experimental samples",
+        "Identified drug-induced network rewiring and protein complex remodeling, linking cell signaling and stress-response pathways (NF-κB, proteostasis, TGF-β) to resistance and adaptive drug response relevant to oncology drug development",
+        "Developed predictive models (ElasticNet, LASSO, neural networks) to estimate drug sensitivity from molecular features, improving interpretability with SHAP-based feature importance",
+        "Built data pipelines and reproducible analysis workflows in Python and SQL for data cleaning, transformation, and statistical analysis (correlation modeling, variance analysis, feature selection) across multi-omics, multi-batch datasets",
+        "Created visualization tools and dashboards, and conducted literature reviews, to communicate findings to interdisciplinary collaborators and guide experimental direction"
       ]
     },
     {
       "role": "Graduate Research Assistant",
-      "org": "University of Florida — Sixue Chen Lab",
+      "org": "University of Florida — Sixue Chen Lab · Gainesville, FL",
       "start": "2017",
       "end": "2022",
       "bullets": [
-        "Studied MPK4 kinase signaling networks in plant immunity using phosphoproteomics",
-        "Mapped kinase-substrate interactomes via TurboID proximity labeling and co-immunoprecipitation"
+        "Designed and executed hands-on experiments in molecular biology, biochemistry, and cell biology, independently troubleshooting assays to ensure reproducible data generation",
+        "Collected and analyzed experimental data using statistical and computational approaches — including differential expression and pathway-level analysis — with reproducible workflows in R and Python for data processing and statistical testing",
+        "Developed and documented standardized protocols (SOPs) to improve reproducibility and efficiency across experiments",
+        "Communicated experimental findings through peer-reviewed publications and presentations"
       ]
     }
   ],
