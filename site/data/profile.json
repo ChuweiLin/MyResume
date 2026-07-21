@@ -2,12 +2,77 @@
   "draft": true,
   "summary": "Researcher specializing in mass spectrometry-based proteomics, currently at the University of Washington studying protein modification networks, glycoproteomics, and cell heterogeneity in cancer. Previously completed doctoral research at the University of Florida investigating plant immune signaling through phosphoproteomics and kinase-substrate interaction mapping.",
   "skills": [
-    "Mass spectrometry-based proteomics",
-    "Quantitative & multiplexed proteomics (TMT, spectral library matching)",
-    "Protein-protein interaction mapping (co-IP, TurboID proximity labeling)",
-    "Bioinformatics & proteomic data analysis",
-    "Plant molecular biology",
-    "Scientific writing & peer-reviewed publishing"
+    {
+      "category": "Cellular & Molecular Biology",
+      "items": [
+        "Mammalian and cancer cell line culture (aseptic technique)",
+        "Cell viability, signaling, and functional assays",
+        "Western blot",
+        "qPCR"
+      ]
+    },
+    {
+      "category": "Oncology & Pharmacology",
+      "items": [
+        "Tumor biology and cell signaling pathways (NF-κB, TGF-β, proteostasis)",
+        "Mechanisms of drug response and resistance",
+        "Small-molecule drug perturbation studies"
+      ]
+    },
+    {
+      "category": "Proteomics & Multi-omics",
+      "items": [
+        "LC-MS/MS (TMT-based quantitative proteomics)",
+        "Protein network and complex analysis (e.g., CORUM-based)",
+        "Multi-omics data integration",
+        "Assay development and workflow optimization"
+      ]
+    },
+    {
+      "category": "Statistical Analysis & Modeling",
+      "items": [
+        "Regression modeling (linear, logistic, ElasticNet/LASSO)",
+        "Survival analysis (conceptual familiarity; extendable to clinical datasets)",
+        "Multivariate analysis, clustering (UMAP), correlation/network analysis",
+        "Hypothesis testing & experimental design"
+      ]
+    },
+    {
+      "category": "Programming & Tools",
+      "items": [
+        "Python (pandas, NumPy, scikit-learn)",
+        "R (tidyverse, GSVA, statistical modeling)",
+        "SQL (PostgreSQL, SQLite)",
+        "Data visualization (Matplotlib, Seaborn, Plotly)"
+      ]
+    },
+    {
+      "category": "Data Science & Machine Learning",
+      "items": [
+        "Predictive modeling for drug response",
+        "Feature selection & model interpretation (SHAP)",
+        "Multi-modal data integration (proteomics, genomics, transcriptomics)"
+      ]
+    },
+    {
+      "category": "Instructional & Teaching Skills",
+      "items": [
+        "Active learning and student-centered teaching strategies",
+        "Inclusive and equitable teaching practices for diverse student populations",
+        "Curriculum and assessment development",
+        "Laboratory instruction and safety training",
+        "Academic mentoring and student support",
+        "Instructional technology integration (presentations, digital tools, data visualization)"
+      ]
+    },
+    {
+      "category": "Other",
+      "items": [
+        "Bilingual: Mandarin (fluent), English (fluent)",
+        "Scientific communication & cross-functional collaboration",
+        "Electronic lab notebook documentation"
+      ]
+    }
   ],
   "experience": [
     {

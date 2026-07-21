@@ -145,12 +145,27 @@ function renderProfile(profile) {
 
   document.getElementById("summary-text").textContent = profile.summary || "";
 
-  const skillsList = document.getElementById("skills-list");
-  skillsList.innerHTML = "";
-  (profile.skills || []).forEach((skill) => {
-    const li = document.createElement("li");
-    li.textContent = skill;
-    skillsList.appendChild(li);
+  const skillsContainer = document.getElementById("skills-list");
+  skillsContainer.innerHTML = "";
+  (profile.skills || []).forEach((group) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "skill-group";
+
+    const heading = document.createElement("h3");
+    heading.className = "skill-group-title";
+    heading.textContent = group.category || "";
+    wrapper.appendChild(heading);
+
+    const ul = document.createElement("ul");
+    ul.className = "skills-list";
+    (group.items || []).forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      ul.appendChild(li);
+    });
+    wrapper.appendChild(ul);
+
+    skillsContainer.appendChild(wrapper);
   });
 
   const experienceList = document.getElementById("experience-list");

@@ -105,6 +105,21 @@ html {
   margin: 0;
 }
 
+.skill-group {
+  margin-bottom: 20px;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+}
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
