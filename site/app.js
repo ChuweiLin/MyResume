@@ -138,8 +138,86 @@ function renderStats(series) {
   document.getElementById("stat-latest-year").textContent = latest.year;
 }
 
+function renderProfile(profile) {
+  if (profile.draft) {
+    document.getElementById("draft-banner").hidden = false;
+  }
+
+  document.getElementById("summary-text").textContent = profile.summary || "";
+
+  const skillsList = document.getElementById("skills-list");
+  skillsList.innerHTML = "";
+  (profile.skills || []).forEach((skill) => {
+    const li = document.createElement("li");
+    li.textContent = skill;
+    skillsList.appendChild(li);
+  });
+
+  const experienceList = document.getElementById("experience-list");
+  experienceList.innerHTML = "";
+  (profile.experience || []).forEach((job) => {
+    const card = document.createElement("div");
+    card.className = "timeline-item";
+
+    const heading = document.createElement("div");
+    heading.className = "timeline-heading";
+    const role = document.createElement("span");
+    role.className = "timeline-role";
+    role.textContent = job.role || "";
+    const dates = document.createElement("span");
+    dates.className = "timeline-dates";
+    dates.textContent = [job.start, job.end].filter(Boolean).join(" – ");
+    heading.appendChild(role);
+    heading.appendChild(dates);
+    card.appendChild(heading);
+
+    const org = document.createElement("div");
+    org.className = "timeline-org";
+    org.textContent = job.org || "";
+    card.appendChild(org);
+
+    if (job.bullets && job.bullets.length) {
+      const ul = document.createElement("ul");
+      job.bullets.forEach((b) => {
+        const li = document.createElement("li");
+        li.textContent = b;
+        ul.appendChild(li);
+      });
+      card.appendChild(ul);
+    }
+
+    experienceList.appendChild(card);
+  });
+
+  const educationList = document.getElementById("education-list");
+  educationList.innerHTML = "";
+  (profile.education || []).forEach((ed) => {
+    const card = document.createElement("div");
+    card.className = "timeline-item";
+
+    const heading = document.createElement("div");
+    heading.className = "timeline-heading";
+    const degree = document.createElement("span");
+    degree.className = "timeline-role";
+    degree.textContent = [ed.degree, ed.field].filter(Boolean).join(", ");
+    const dates = document.createElement("span");
+    dates.className = "timeline-dates";
+    dates.textContent = [ed.start, ed.end].filter(Boolean).join(" – ");
+    heading.appendChild(degree);
+    heading.appendChild(dates);
+    card.appendChild(heading);
+
+    const org = document.createElement("div");
+    org.className = "timeline-org";
+    org.textContent = ed.institution || "";
+    card.appendChild(org);
+
+    educationList.appendChild(card);
+  });
+}
+
 function renderPublications(pubs) {
-  const container = document.getElementById("publications");
+  const container = document.getElementById("publications-list");
   container.innerHTML = "";
 
   const byYear = new Map();
@@ -196,10 +274,12 @@ function renderPublications(pubs) {
 
 async function init() {
   initThemeToggle();
-  const [pubs, citations] = await Promise.all([
+  const [pubs, citations, profile] = await Promise.all([
     fetch("data/publications.json").then((r) => r.json()),
     fetch("data/citations.json").then((r) => r.json()),
+    fetch("data/profile.json").then((r) => r.json()),
   ]);
+  renderProfile(profile);
   renderStats(citations);
   renderChart(citations);
   renderPublications(pubs);

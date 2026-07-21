@@ -4,10 +4,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Chuwei Lin</title>
-<meta name="description" content="Publications and citation growth for Chuwei Lin." />
+<meta name="description" content="Professional summary, skills, experience, education, and publications for Chuwei Lin." />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<div id="draft-banner" hidden>This page is a work in progress — draft content below is pending your review.</div>
+
 <div class="wrap">
   <header class="hero">
     <div>
@@ -22,8 +24,38 @@
     <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9680;</button>
   </header>
 
-  <section>
-    <h2>Citation growth</h2>
+  <nav id="section-nav">
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#publications">Publications</a>
+  </nav>
+
+  <section id="summary">
+    <h2>Professional summary</h2>
+    <p class="summary-text" id="summary-text"></p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list" id="skills-list"></ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div id="experience-list"></div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div id="education-list"></div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <h3 class="subsection-title">Citation growth</h3>
     <div class="chart-card">
       <div class="chart-stats">
         <div>
@@ -37,11 +69,9 @@
       </div>
       <svg id="citation-chart" viewBox="0 0 700 280" preserveAspectRatio="xMidYMid meet"></svg>
     </div>
-  </section>
 
-  <section>
-    <h2>Publications</h2>
-    <div id="publications"></div>
+    <h3 class="subsection-title">Papers</h3>
+    <div id="publications-list"></div>
   </section>
 
   <footer>

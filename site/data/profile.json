@@ -1,0 +1,51 @@
+{
+  "draft": true,
+  "summary": "Researcher specializing in mass spectrometry-based proteomics, currently at the University of Washington studying protein modification networks, glycoproteomics, and cell heterogeneity in cancer. Previously completed doctoral research at the University of Florida investigating plant immune signaling through phosphoproteomics and kinase-substrate interaction mapping.",
+  "skills": [
+    "Mass spectrometry-based proteomics",
+    "Phosphoproteomics",
+    "Quantitative & multiplexed proteomics (TMT, spectral library matching)",
+    "Protein-protein interaction mapping (co-IP, TurboID proximity labeling)",
+    "Bioinformatics & proteomic data analysis",
+    "Plant molecular biology & signaling",
+    "Scientific writing & peer-reviewed publishing"
+  ],
+  "experience": [
+    {
+      "role": "Researcher",
+      "org": "University of Washington — Schweppe Lab",
+      "start": "2023",
+      "end": "Present",
+      "bullets": [
+        "Mass spectrometry method development for quantitative and multiplexed proteomics",
+        "Collaborative proteomics on cancer cell heterogeneity and glycoprotein interaction studies"
+      ]
+    },
+    {
+      "role": "PhD Researcher",
+      "org": "University of Florida — Sixue Chen Lab",
+      "start": "2018",
+      "end": "2023",
+      "bullets": [
+        "Studied MPK4 kinase signaling networks in plant immunity using phosphoproteomics",
+        "Mapped kinase-substrate interactomes via TurboID proximity labeling and co-immunoprecipitation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "[verify field]",
+      "institution": "University of Florida",
+      "start": "2018",
+      "end": "2023"
+    },
+    {
+      "degree": "[verify degree]",
+      "field": "[verify field]",
+      "institution": "[add undergraduate institution]",
+      "start": "",
+      "end": ""
+    }
+  ]
+}
