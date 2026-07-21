@@ -75,6 +75,10 @@ def venue_name(work: dict) -> str:
     return source.get("display_name") or ""
 
 
+def doi(work: dict) -> str:
+    return work.get("doi") or work.get("ids", {}).get("doi") or ""
+
+
 def coauthors(work: dict, orcid: str) -> str:
     orcid_url = f"https://orcid.org/{orcid}"
     names = [
@@ -95,6 +99,7 @@ def build_rows(works: list[dict], orcid: str) -> list[tuple]:
                 venue_name(w),
                 w.get("type") or "",
                 coauthors(w, orcid),
+                doi(w),
             )
         )
     rows.sort(key=lambda r: (-(r[1] or 0), r[0]))
@@ -106,7 +111,7 @@ def write_spreadsheet(rows: list[tuple], out_path: Path) -> None:
     ws = wb.active
     ws.title = "Publications"
 
-    headers = ["Title", "Year", "Venue", "Type", "Co-authors"]
+    headers = ["Title", "Year", "Venue", "Type", "Co-authors", "DOI"]
     for col, header in enumerate(headers, start=1):
         cell = ws.cell(row=1, column=col, value=header)
         cell.font = Font(name=FONT_NAME, bold=True)
@@ -116,7 +121,7 @@ def write_spreadsheet(rows: list[tuple], out_path: Path) -> None:
             cell = ws.cell(row=row_idx, column=col_idx, value=value)
             cell.font = Font(name=FONT_NAME)
 
-    widths = [70, 8, 45, 16, 60]
+    widths = [70, 8, 45, 16, 60, 38]
     for col, width in enumerate(widths, start=1):
         ws.column_dimensions[get_column_letter(col)].width = width
 
