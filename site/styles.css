@@ -357,12 +357,11 @@ svg#citation-chart {
 }
 
 .paper-title a {
-  color: var(--text-primary);
+  color: var(--series-1);
   text-decoration: none;
 }
 
 .paper-title a:hover {
-  color: var(--series-1);
   text-decoration: underline;
 }
 

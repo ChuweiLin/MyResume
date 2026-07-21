@@ -3,29 +3,28 @@
   "summary": "Researcher specializing in mass spectrometry-based proteomics, currently at the University of Washington studying protein modification networks, glycoproteomics, and cell heterogeneity in cancer. Previously completed doctoral research at the University of Florida investigating plant immune signaling through phosphoproteomics and kinase-substrate interaction mapping.",
   "skills": [
     "Mass spectrometry-based proteomics",
-    "Phosphoproteomics",
     "Quantitative & multiplexed proteomics (TMT, spectral library matching)",
     "Protein-protein interaction mapping (co-IP, TurboID proximity labeling)",
     "Bioinformatics & proteomic data analysis",
-    "Plant molecular biology & signaling",
+    "Plant molecular biology",
     "Scientific writing & peer-reviewed publishing"
   ],
   "experience": [
     {
-      "role": "Researcher",
+      "role": "Scientist",
       "org": "University of Washington — Schweppe Lab",
-      "start": "2023",
+      "start": "2022",
       "end": "Present",
       "bullets": [
         "Mass spectrometry method development for quantitative and multiplexed proteomics",
-        "Collaborative proteomics on cancer cell heterogeneity and glycoprotein interaction studies"
+        ""
       ]
     },
     {
-      "role": "PhD Researcher",
+      "role": "Graduate Research Assistant",
       "org": "University of Florida — Sixue Chen Lab",
-      "start": "2018",
-      "end": "2023",
+      "start": "2017",
+      "end": "2022",
       "bullets": [
         "Studied MPK4 kinase signaling networks in plant immunity using phosphoproteomics",
         "Mapped kinase-substrate interactomes via TurboID proximity labeling and co-immunoprecipitation"
@@ -35,17 +34,24 @@
   "education": [
     {
       "degree": "Ph.D.",
-      "field": "[verify field]",
+      "field": "Biology",
       "institution": "University of Florida",
-      "start": "2018",
-      "end": "2023"
+      "start": "2017",
+      "end": "2022"
     },
     {
-      "degree": "[verify degree]",
-      "field": "[verify field]",
-      "institution": "[add undergraduate institution]",
-      "start": "",
-      "end": ""
+      "degree": "MSc",
+      "field": "Biology",
+      "institution": "University of Edinburgh",
+      "start": "2015",
+      "end": "2016"
+    },
+    {
+      "degree": "BSc",
+      "field": "Biology",
+      "institution": "Hong Kong Baptist University",
+      "start": "2011",
+      "end": "2015"
     }
   ]
 }
