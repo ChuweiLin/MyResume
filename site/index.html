@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chuwei Lin</title>
+<meta name="description" content="Publications and citation growth for Chuwei Lin." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <h1>Chuwei Lin</h1>
+      <p class="bio" id="bio">Bio coming soon.</p>
+      <div class="links" id="links">
+        <a href="mailto:chuwei.lin.phd@gmail.com">Email</a>
+        <a href="https://orcid.org/0000-0002-8640-5695" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://github.com/ChuweiLin" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9680;</button>
+  </header>
+
+  <section>
+    <h2>Citation growth</h2>
+    <div class="chart-card">
+      <div class="chart-stats">
+        <div>
+          <div class="stat-value" id="stat-total">&mdash;</div>
+          <div class="stat-label">total citations</div>
+        </div>
+        <div>
+          <div class="stat-value" id="stat-latest">&mdash;</div>
+          <div class="stat-label">citations in <span id="stat-latest-year"></span></div>
+        </div>
+      </div>
+      <svg id="citation-chart" viewBox="0 0 700 280" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div id="publications"></div>
+  </section>
+
+  <footer>
+    Data from <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>.
+    Source on <a href="https://github.com/ChuweiLin/MyPublications" target="_blank" rel="noopener">GitHub</a>.
+  </footer>
+</div>
+
+<div id="tooltip"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
