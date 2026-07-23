@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Chuwei Lin</title>
-<meta name="description" content="Professional summary, skills, experience, education, and publications for Chuwei Lin." />
+<title>Chuwei Lin Resume</title>
+<meta name="description" content="Professional summary, projects, collaborations, education, and publications for Chuwei Lin." />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,9 +12,13 @@
 
 <div class="wrap">
   <header class="hero">
-    <div>
+    <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9680;</button>
+    <div class="hero-photo">
+      <img src="image/headshot.jpeg" alt="Chuwei (Chelsea) Lin" />
+    </div>
+    <div class="hero-content">
       <h1>Chuwei (Chelsea) Lin</h1>
-      <p class="bio" id="bio">Scientist in proteomics and data analysis.</p>
+      <p class="bio" id="bio"></p>
       <div class="links" id="links">
         <a href="mailto:chuwei.lin.phd@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/chuwei-lin-20115" target="_blank" rel="noopener">LinkedIn</a>
@@ -22,38 +26,28 @@
         <a href="https://orcid.org/0000-0002-8640-5695" target="_blank" rel="noopener">ORCID</a>
       </div>
     </div>
-    <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9680;</button>
   </header>
 
   <nav id="section-nav">
-    <a href="#summary">Summary</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
+    <button class="nav-tab active" type="button" data-target="work">Projects &amp; Collaborations</button>
+    <button class="nav-tab" type="button" data-target="education">Education</button>
+    <button class="nav-tab" type="button" data-target="publications">Publications</button>
   </nav>
 
-  <section id="summary">
-    <h2>Professional summary</h2>
-    <p class="summary-text" id="summary-text"></p>
+  <section id="work" class="tab-panel active">
+    <h2>Projects</h2>
+    <div id="projects-list"></div>
+
+    <h2>Collaborations</h2>
+    <div id="collaborations-list"></div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div id="skills-list"></div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div id="experience-list"></div>
-  </section>
-
-  <section id="education">
+  <section id="education" class="tab-panel">
     <h2>Education</h2>
     <div id="education-list"></div>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="tab-panel">
     <h2>Publications</h2>
 
     <h3 class="subsection-title">Citation growth</h3>
@@ -71,8 +65,10 @@
       <svg id="citation-chart" viewBox="0 0 700 280" preserveAspectRatio="xMidYMid meet"></svg>
     </div>
 
-    <h3 class="subsection-title">Papers</h3>
-    <div id="publications-list"></div>
+    <details id="papers-details">
+      <summary class="subsection-title">Full publication list</summary>
+      <div id="publications-list"></div>
+    </details>
   </section>
 
   <footer>
@@ -82,6 +78,11 @@
 </div>
 
 <div id="tooltip"></div>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="" />
+</div>
 
 <script src="app.js"></script>
 </body>

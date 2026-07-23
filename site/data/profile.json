@@ -1,104 +1,67 @@
 {
   "draft": false,
   "summary": "Scientist specializing in translational oncology and drug response biology, combining hands-on bench expertise with computational rigor. Ph.D. in Biology with 5+ years of experience independently designing, executing, and troubleshooting large-scale cell-based and molecular studies — spanning mammalian cell culture, functional assays, and multi-omics platforms — to generate high-quality, reproducible data that has directly informed mechanisms of drug resistance and therapeutic target prioritization. Strong working knowledge of tumor biology and cell signaling pathways (NF-κB, TGF-β), paired with expertise in statistical modeling, multi-omics data integration, and machine learning (R, Python, SQL) to support data-driven decision-making in drug discovery and translational research. Skilled at communicating complex experimental and statistical insights to cross-functional teams; fluent in Mandarin and English.",
-  "skills": [
+  "projects": [
     {
-      "category": "Cellular & Molecular Biology",
-      "items": [
-        "Mammalian and cancer cell line culture (aseptic technique)",
-        "Cell viability, signaling, and functional assays",
+      "name": "Proteomic Drug-Perturbation Platform for Cancer Drug Resistance",
+      "affiliation": "Schweppe Lab at Univeristy of Washington",
+      "figure": "image/project1.png",
+      "summary": "Independently designed and executed a large-scale proteomic drug-perturbation platform across 24 human cancer cell lines and 15 therapeutics, generating and analyzing over 1,000 reproducible proteome and viability profiles. Identified drug-induced network rewiring and protein complex remodeling linking cell signaling and stress-response pathways (NF-κB, proteostasis, TGF-β) to resistance and adaptive drug response, and built predictive models (ElasticNet, LASSO, neural networks) with SHAP-based interpretation to estimate drug sensitivity from molecular features. At the University of Washington's Schweppe Lab.",
+      "skills": [
+        "Mammalian cell culture",
+        "LC-MS/MS",
+        "Isotopic labeling (TMT)",
+        "Python (pandas, scikit-learn)",
+        "SQL",
+        "ElasticNet/LASSO modeling",
+        "SHAP feature interpretation",
+        "Liquid handler automation (OT2)",
+        "Oncology"        
+      ],
+      "publications": [
+        "https://doi.org/10.1038/s42003-025-09455-0"
+      ]
+    },
+    {
+      "name": "MPK4 Kinase Signaling in Plant Immunity",
+      "affiliation": "Sixue Chen Lab at Univeristy of Florida",
+      "figure": "image/project2.jpg",
+      "summary": "Mapping the MPK4 kinase interactome and phosphorylation dynamics in plant guard cells using TurboID proximity labeling and phosphoproteomics, revealing molecular networks underlying stomatal immune responses in Arabidopsis. Developed and documented standardized protocols (SOPs) to improve reproducibility across experiments. At the University of Florida's Sixue Chen Lab.",
+      "skills": [
+        "Plant cell tissue culture",
+        "Phosphoproteomics",
+        "Proximity labeling (TurboID)",
+        "LC-MS/MS (label-free)",
         "Western blot",
-        "qPCR"
-      ]
-    },
-    {
-      "category": "Oncology & Pharmacology",
-      "items": [
-        "Tumor biology and cell signaling pathways (NF-κB, TGF-β, proteostasis)",
-        "Mechanisms of drug response and resistance",
-        "Small-molecule drug perturbation studies"
-      ]
-    },
-    {
-      "category": "Proteomics & Multi-omics",
-      "items": [
-        "LC-MS/MS (TMT-based quantitative proteomics)",
-        "Protein network and complex analysis (e.g., CORUM-based)",
-        "Multi-omics data integration",
-        "Assay development and workflow optimization"
-      ]
-    },
-    {
-      "category": "Statistical Analysis & Modeling",
-      "items": [
-        "Regression modeling (linear, logistic, ElasticNet/LASSO)",
-        "Survival analysis (conceptual familiarity; extendable to clinical datasets)",
-        "Multivariate analysis, clustering (UMAP), correlation/network analysis",
-        "Hypothesis testing & experimental design"
-      ]
-    },
-    {
-      "category": "Programming & Tools",
-      "items": [
-        "Python (pandas, NumPy, scikit-learn)",
-        "R (tidyverse, GSVA, statistical modeling)",
-        "SQL (PostgreSQL, SQLite)",
-        "Data visualization (Matplotlib, Seaborn, Plotly)"
-      ]
-    },
-    {
-      "category": "Data Science & Machine Learning",
-      "items": [
-        "Predictive modeling for drug response",
-        "Feature selection & model interpretation (SHAP)",
-        "Multi-modal data integration (proteomics, genomics, transcriptomics)"
-      ]
-    },
-    {
-      "category": "Instructional & Teaching Skills",
-      "items": [
-        "Active learning and student-centered teaching strategies",
-        "Inclusive and equitable teaching practices for diverse student populations",
-        "Curriculum and assessment development",
-        "Laboratory instruction and safety training",
-        "Academic mentoring and student support",
-        "Instructional technology integration (presentations, digital tools, data visualization)"
-      ]
-    },
-    {
-      "category": "Other",
-      "items": [
-        "Bilingual: Mandarin (fluent), English (fluent)",
-        "Scientific communication & cross-functional collaboration",
-        "Electronic lab notebook documentation"
+        "Molecular plant biology",
+        "Plant pathology",
+        "R"
+      ],
+      "publications": [
+        "https://doi.org/10.1016/j.jprot.2023.104903",
+        "https://doi.org/10.1016/bs.mie.2022.06.005",
+        "https://doi.org/10.3390/ijms23020880",
+        "https://doi.org/10.1007/s00425-020-03474-3",
+        "https://doi.org/10.1021/acs.jproteome.8b00345"
       ]
     }
   ],
-  "experience": [
+  "collaboration": [
     {
-      "role": "Scientist",
-      "org": "University of Washington — Schweppe Lab · Seattle, WA",
-      "start": "2022",
-      "end": "Present",
-      "bullets": [
-        "Independently designed and executed a large-scale proteomic drug-perturbation platform across 24 human cancer cell lines and 15 therapeutics, generating and analyzing over 1,000 reproducible proteome and viability profiles to identify mechanisms of drug resistance",
-        "Performed cell-based functional assays and molecular techniques (Western blot, qPCR) to validate drug response phenotypes, and maintained mammalian/cancer cell line cultures with consistent aseptic technique across 1,000+ experimental samples",
-        "Identified drug-induced network rewiring and protein complex remodeling, linking cell signaling and stress-response pathways (NF-κB, proteostasis, TGF-β) to resistance and adaptive drug response relevant to oncology drug development",
-        "Developed predictive models (ElasticNet, LASSO, neural networks) to estimate drug sensitivity from molecular features, improving interpretability with SHAP-based feature importance",
-        "Built data pipelines and reproducible analysis workflows in Python and SQL for data cleaning, transformation, and statistical analysis (correlation modeling, variance analysis, feature selection) across multi-omics, multi-batch datasets",
-        "Created visualization tools and dashboards, and conducted literature reviews, to communicate findings to interdisciplinary collaborators and guide experimental direction"
+      "name": "Mapping Membrane Lipid–Protein Interactions",
+      "collaborator": "Zhongwu Guo Lab at Univeristy of Florida",
+      "summary": "",
+      "publications": [
+        "https://doi.org/10.1016/j.jlr.2024.100570",
+        "https://doi.org/10.1021/acs.jproteome.2c00728"
       ]
     },
     {
-      "role": "Graduate Research Assistant",
-      "org": "University of Florida — Sixue Chen Lab · Gainesville, FL",
-      "start": "2017",
-      "end": "2022",
-      "bullets": [
-        "Designed and executed hands-on experiments in molecular biology, biochemistry, and cell biology, independently troubleshooting assays to ensure reproducible data generation",
-        "Collected and analyzed experimental data using statistical and computational approaches — including differential expression and pathway-level analysis — with reproducible workflows in R and Python for data processing and statistical testing",
-        "Developed and documented standardized protocols (SOPs) to improve reproducibility and efficiency across experiments",
-        "Communicated experimental findings through peer-reviewed publications and presentations"
+      "name": "Mapping de novo designed oligomers downstream signaling",
+      "collaborator": "David Baker Lab at University of Washington",
+      "summary": "" ,
+      "publications": [
+        "https://doi.org/10.1016/j.cell.2024.05.025"
       ]
     }
   ],
