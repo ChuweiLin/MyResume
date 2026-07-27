@@ -71,7 +71,8 @@ to load silently (check the browser console if content stops appearing).
 
 Everything else in `site/styles.css`, grouped by what you're touching:
 
-- Cards: `.project`, `.collaboration`, `.timeline-item`, `.paper`
+- Cards: `.project`, `.collaboration`, `.paper`
+- Education journey curve: `.edu-journey`, `.edu-stop`, `.edu-stop-marker`
 - Skill/pill tags: `.skills-list li`
 - Hero layout: `header.hero`, `.hero-photo`, `.hero-content`
 - Tab nav: `.nav-tab`, `.tab-panel`

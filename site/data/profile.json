@@ -1,22 +1,25 @@
 {
   "draft": false,
-  "summary": "Scientist specializing in translational oncology and drug response biology, combining hands-on bench expertise with computational rigor. Ph.D. in Biology with 5+ years of experience independently designing, executing, and troubleshooting large-scale cell-based and molecular studies — spanning mammalian cell culture, functional assays, and multi-omics platforms — to generate high-quality, reproducible data that has directly informed mechanisms of drug resistance and therapeutic target prioritization. Strong working knowledge of tumor biology and cell signaling pathways (NF-κB, TGF-β), paired with expertise in statistical modeling, multi-omics data integration, and machine learning (R, Python, SQL) to support data-driven decision-making in drug discovery and translational research. Skilled at communicating complex experimental and statistical insights to cross-functional teams; fluent in Mandarin and English.",
+  "summary": "Scientist specializing in LC-MS-based proteomics and data analysis. Ph.D. in Biology with 5+ years bridging large-scale cell-based molecular studies with rigorous statistical modeling (R, Python, SQL) and multi-omics integration to drive translational oncology and drug-discovery insights for cross-functional teams; fluent in Mandarin and English.",
   "projects": [
     {
       "name": "Proteomic Drug-Perturbation Platform for Cancer Drug Resistance",
       "affiliation": "Schweppe Lab at Univeristy of Washington",
-      "figure": "image/project1.png",
-      "summary": "Independently designed and executed a large-scale proteomic drug-perturbation platform across 24 human cancer cell lines and 15 therapeutics, generating and analyzing over 1,000 reproducible proteome and viability profiles. Identified drug-induced network rewiring and protein complex remodeling linking cell signaling and stress-response pathways (NF-κB, proteostasis, TGF-β) to resistance and adaptive drug response, and built predictive models (ElasticNet, LASSO, neural networks) with SHAP-based interpretation to estimate drug sensitivity from molecular features. At the University of Washington's Schweppe Lab.",
-      "skills": [
+      "figure": "image/project1.webp",
+      "summary": "Designed and executed a large-scale proteomic drug-perturbation platform across multiple human cancer cell lines and multiple therapeutics, generating and analyzing over 1,000 reproducible proteome and viability profiles. Identified drug-induced network rewiring and protein complex remodeling linking cell signaling and stress-response pathways to resistance and adaptive drug response, and built predictive models to estimate drug sensitivity from molecular features.",
+      "wetSkills": [
         "Mammalian cell culture",
+        "Protein purification",
         "LC-MS/MS",
-        "Isotopic labeling (TMT)",
+        "Isotopic labeling (TMT)",        
+        "Oncology"
+      ],
+      "drySkills": [
         "Python (pandas, scikit-learn)",
         "SQL",
         "ElasticNet/LASSO modeling",
-        "SHAP feature interpretation",
-        "Liquid handler automation (OT2)",
-        "Oncology"        
+        "SHAP feature interpretation" ,
+        "Liquid handler automation (OT2)"      
       ],
       "publications": [
         "https://doi.org/10.1038/s42003-025-09455-0"
@@ -25,16 +28,19 @@
     {
       "name": "MPK4 Kinase Signaling in Plant Immunity",
       "affiliation": "Sixue Chen Lab at Univeristy of Florida",
-      "figure": "image/project2.jpg",
-      "summary": "Mapping the MPK4 kinase interactome and phosphorylation dynamics in plant guard cells using TurboID proximity labeling and phosphoproteomics, revealing molecular networks underlying stomatal immune responses in Arabidopsis. Developed and documented standardized protocols (SOPs) to improve reproducibility across experiments. At the University of Florida's Sixue Chen Lab.",
-      "skills": [
+      "figure": "image/project2.webp",
+      "summary": "Mapped the MPK4 kinase interactome and phosphorylation dynamics in plant guard cells using TurboID proximity labeling and phosphoproteomics, revealing molecular networks underlying stomatal immune responses in Arabidopsis. Developed and documented standardized protocols (SOPs) to improve reproducibility across experiments.",
+      "wetSkills": [
         "Plant cell tissue culture",
         "Phosphoproteomics",
         "Proximity labeling (TurboID)",
+        "Pull-down assays",
         "LC-MS/MS (label-free)",
         "Western blot",
         "Molecular plant biology",
-        "Plant pathology",
+        "Plant pathology"
+      ],
+      "drySkills": [        
         "R"
       ],
       "publications": [
@@ -50,40 +56,55 @@
     {
       "name": "Mapping Membrane Lipid–Protein Interactions",
       "collaborator": "Zhongwu Guo Lab at Univeristy of Florida",
-      "summary": "",
+      "summary": "This project used bifunctional chemical probes — a diazirine group in the lipid tail for UV-triggered photo-crosslinking, paired with a clickable alkyne on the glycan headgroup — to capture and identify membrane proteins that interact with glycosphingolipids (GSLs) and GPI-anchors. Ran LC-MS/MS to identify and quantify the crosslinked, biotin-tagged interacting proteins.",
       "publications": [
         "https://doi.org/10.1016/j.jlr.2024.100570",
         "https://doi.org/10.1021/acs.jproteome.2c00728"
       ]
     },
     {
-      "name": "Mapping de novo designed oligomers downstream signaling",
+      "name": "Mapping de novo Designed Oligomers Downstream Signaling",
       "collaborator": "David Baker Lab at University of Washington",
-      "summary": "" ,
+      "summary": "This project used computationally designed cyclic protein oligomers displaying a synthetic FGFR-binding module to create tunable agonists whose valency and geometry control FGF/MAPK and calcium signaling, steering stem-cell differentiation toward either endothelial cells or pericytes during vascular development. Ran a comparative phosphoproteomics experiment via LC-MS/MS on FGFR1c-expressing CHO cells treated with the designed agonist (C6-79C_mb7) or natural FGF2, quantifying whole-proteome and phosphopeptide abundance changes to show the synthetic agonist faithfully reproduces natural FGF2 signaling.",
       "publications": [
         "https://doi.org/10.1016/j.cell.2024.05.025"
       ]
     }
   ],
   "education": [
+        {
+      "title": "Scientist",
+      "field": "Oncology",
+      "institution": "University of Washington",
+      "location": "Seattle, WA",
+      "logo": "image/University_of_Washington_seal.svg",
+      "start": "2022",
+      "end": "2026"
+    },
     {
-      "degree": "Ph.D.",
+      "title": "Ph.D.",
       "field": "Biology",
       "institution": "University of Florida",
+      "location": "Gainesville, FL",
+      "logo": "image/University_of_Florida_seal.svg",
       "start": "2017",
       "end": "2022"
     },
     {
-      "degree": "MSc",
+      "title": "MSc",
       "field": "Biology",
       "institution": "University of Edinburgh",
+      "location": "Edinburgh, UK",
+      "logo": "image/University_of_Edinburgh_ceremonial_roundel.svg",
       "start": "2015",
       "end": "2016"
     },
     {
-      "degree": "BSc",
+      "title": "BSc",
       "field": "Biology",
       "institution": "Hong Kong Baptist University",
+      "location": "Hong Kong",
+      "logo": "image/Hong_Kong_Baptist_University_logo.svg",
       "start": "2011",
       "end": "2015"
     }

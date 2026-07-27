@@ -178,31 +178,115 @@ function renderProfile(profile) {
   }
 
   document.getElementById("bio").textContent = profile.summary || "";
+}
 
-  const educationList = document.getElementById("education-list");
-  educationList.innerHTML = "";
-  (profile.education || []).forEach((ed) => {
-    const card = document.createElement("div");
-    card.className = "timeline-item";
+function institutionMonogram(name) {
+  const stopwords = new Set(["of", "the", "and"]);
+  const initials = (name || "")
+    .split(/\s+/)
+    .filter((w) => w && !stopwords.has(w.toLowerCase()))
+    .map((w) => w[0].toUpperCase())
+    .join("");
+  return initials.slice(0, 3) || "?";
+}
 
-    const heading = document.createElement("div");
-    heading.className = "timeline-heading";
-    const degree = document.createElement("span");
-    degree.className = "timeline-role";
-    degree.textContent = [ed.degree, ed.field].filter(Boolean).join(", ");
-    const dates = document.createElement("span");
-    dates.className = "timeline-dates";
-    dates.textContent = [ed.start, ed.end].filter(Boolean).join(" – ");
-    heading.appendChild(degree);
-    heading.appendChild(dates);
-    card.appendChild(heading);
+function renderEducation(education) {
+  const container = document.getElementById("education-list");
+  container.innerHTML = "";
 
-    const org = document.createElement("div");
-    org.className = "timeline-org";
-    org.textContent = ed.institution || "";
-    card.appendChild(org);
+  const entries = (education || [])
+    .slice()
+    .sort((a, b) => parseInt(a.start, 10) - parseInt(b.start, 10));
 
-    educationList.appendChild(card);
+  if (!entries.length) return;
+
+  const width = 640;
+  const height = 700;
+  const topY = 90;
+  const bottomY = 610;
+  const xRight = width * 0.656;
+  const xLeft = width * 0.344;
+
+  const points = entries.map((ed, i) => ({
+    x: i % 2 === 0 ? xRight : xLeft,
+    y: entries.length === 1 ? height / 2 : topY + (i * (bottomY - topY)) / (entries.length - 1),
+    ed,
+  }));
+
+  const line = document.createElement("div");
+  line.className = "edu-journey-line";
+  container.appendChild(line);
+
+  if (points.length > 1) {
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    svg.setAttribute("preserveAspectRatio", "none");
+    svg.classList.add("edu-journey-svg");
+
+    let d = `M ${points[0].x} ${points[0].y}`;
+    for (let i = 1; i < points.length; i++) {
+      const prev = points[i - 1];
+      const curr = points[i];
+      const midY = (prev.y + curr.y) / 2;
+      d += ` C ${prev.x} ${midY}, ${curr.x} ${midY}, ${curr.x} ${curr.y}`;
+    }
+
+    const path = document.createElementNS(svgNS, "path");
+    path.setAttribute("d", d);
+    path.classList.add("edu-curve-path");
+    svg.appendChild(path);
+    container.appendChild(svg);
+  }
+
+  points.forEach((point, i) => {
+    const { ed } = point;
+
+    const stop = document.createElement("div");
+    stop.className = `edu-stop ${i % 2 === 0 ? "edu-side-right" : "edu-side-left"}`;
+    if (i % 2 === 1) stop.classList.add("edu-marker-alt");
+    stop.style.setProperty("--x", `${(point.x / width) * 100}%`);
+    stop.style.top = `${(point.y / height) * 100}%`;
+
+    const marker = document.createElement("div");
+    marker.className = "edu-stop-marker";
+    if (ed.logo) {
+      const img = document.createElement("img");
+      img.src = ed.logo;
+      img.alt = ed.institution ? `${ed.institution} logo` : "Institution logo";
+      marker.appendChild(img);
+    } else {
+      marker.textContent = institutionMonogram(ed.institution);
+    }
+    stop.appendChild(marker);
+
+    const text = document.createElement("div");
+    text.className = "edu-stop-text";
+
+    const years = document.createElement("div");
+    years.className = "edu-stop-years";
+    years.textContent = [ed.start, ed.end].filter(Boolean).join(" – ");
+    text.appendChild(years);
+
+    const degree = document.createElement("div");
+    degree.className = "edu-stop-degree";
+    degree.textContent = [ed.title || ed.degree, ed.field].filter(Boolean).join(", ");
+    text.appendChild(degree);
+
+    const institution = document.createElement("div");
+    institution.className = "edu-stop-institution";
+    institution.textContent = ed.institution || "";
+    text.appendChild(institution);
+
+    if (ed.location) {
+      const location = document.createElement("div");
+      location.className = "edu-stop-location";
+      location.textContent = ed.location;
+      text.appendChild(location);
+    }
+
+    stop.appendChild(text);
+    container.appendChild(stop);
   });
 }
 
@@ -256,7 +340,9 @@ function renderProjects(projects, pubs) {
     summary.textContent = proj.summary || "";
     details.appendChild(summary);
 
-    if (proj.skills && proj.skills.length) {
+    const wetSkills = proj.wetSkills || [];
+    const drySkills = proj.drySkills || [];
+    if (wetSkills.length || drySkills.length) {
       const skillsHeading = document.createElement("h4");
       skillsHeading.className = "project-subheading";
       skillsHeading.textContent = "Skills used";
@@ -264,9 +350,16 @@ function renderProjects(projects, pubs) {
 
       const skillsList = document.createElement("ul");
       skillsList.className = "skills-list";
-      proj.skills.forEach((item) => {
+      wetSkills.forEach((name) => {
         const li = document.createElement("li");
-        li.textContent = item;
+        li.textContent = name;
+        li.classList.add("skill-wet");
+        skillsList.appendChild(li);
+      });
+      drySkills.forEach((name) => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        li.classList.add("skill-dry");
         skillsList.appendChild(li);
       });
       details.appendChild(skillsList);
@@ -424,6 +517,7 @@ async function init() {
   renderProfile(profile);
   renderProjects(profile.projects, pubs);
   renderCollaborations(profile.collaboration, pubs);
+  renderEducation(profile.education);
   renderStats(citations);
   renderChart(citations);
   renderPublications(pubs);
